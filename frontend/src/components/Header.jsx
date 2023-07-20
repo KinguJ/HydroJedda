@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaShoppingCart, FaUser, FaQuestion } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -29,17 +29,17 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
+      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
               <img src={logo} style={{ height: '50px', width: '50px' }} alt='HydroJed' />
             </Navbar.Brand>
           </LinkContainer>
+          <SearchBox />
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <SearchBox />
               <LinkContainer to='/cart'>
                 <Nav.Link>
                   <FaShoppingCart /> Cart
@@ -50,6 +50,7 @@ const Header = () => {
                   )}
                 </Nav.Link>
               </LinkContainer>
+              <LinkContainer to='/about'><Nav.Link>Who Are We <FaQuestion></FaQuestion></Nav.Link></LinkContainer>
               {userInfo ? (
                 <>
                   <NavDropdown title={userInfo.name} id='username'>
