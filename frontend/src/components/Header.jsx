@@ -33,7 +33,7 @@ const Header = () => {
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              <img src={logo} style={{ height: '50px', width: '50px' }} alt='HydroJed' />
+              <img src={logo} style={{ height: '45px', width: '50px' }} alt='HydroJed' />
             </Navbar.Brand>
           </LinkContainer>
           <SearchBox />
@@ -50,7 +50,7 @@ const Header = () => {
                   )}
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/about'><Nav.Link>Who Are We <FaQuestion></FaQuestion></Nav.Link></LinkContainer>
+              <LinkContainer to='/about'><Nav.Link><FaQuestion></FaQuestion> Who are we</Nav.Link></LinkContainer>
               {userInfo ? (
                 <>
                   <NavDropdown title={userInfo.name} id='username'>
