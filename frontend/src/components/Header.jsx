@@ -29,8 +29,8 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
-        <Container>
+      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect style={{ opacity: 1}} >
+        <Container >
           <LinkContainer to='/'>
             <Navbar.Brand>
               <img src={logo} style={{ height: '45px', width: '50px' }} alt='HydroJed' />
