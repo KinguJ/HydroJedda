@@ -16,6 +16,16 @@ connectDB();
 
 const app = express();
 
+// const corsOptions = {
+//   origin: 'https://hydro-jed.com', // Replace with your desired origin
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true, // Allow cookies to be sent cross-origin
+// };
+
+// app.use(cors(corsOptions));
+
+app.use(cors()); // Enable CORS for all routes
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
